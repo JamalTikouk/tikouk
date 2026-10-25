@@ -2,6 +2,8 @@
 
 - [Introduction aux statistiques descriptives](cours/introduction-statistiques-descriptives.md) — cours en français : 50 définitions avec exemples et précisions d’interprétation, tableaux, graphiques, indicateurs, exemples chiffrés et quatre exercices corrigés.
 
+- [Les tableaux statistiques : construction, typologie et interprétation](cours/tableaux-statistiques.md) — typologies, exemples commentés, pourcentages, données manquantes et exercice corrigé.
+
 Le support se consulte directement sur GitHub, sans installation.
 
 ---
