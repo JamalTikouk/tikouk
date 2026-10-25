@@ -1,6 +1,6 @@
 # Ressources pédagogiques
 
-- [Introduction aux statistiques descriptives](cours/introduction-statistiques-descriptives.md) — cours en français : notions fondamentales, tableaux, graphiques, indicateurs, exemples chiffrés et quatre exercices corrigés.
+- [Introduction aux statistiques descriptives](cours/introduction-statistiques-descriptives.md) — cours en français : 50 définitions avec exemples et précisions d’interprétation, tableaux, graphiques, indicateurs, exemples chiffrés et quatre exercices corrigés.
 
 Le support se consulte directement sur GitHub, sans installation.
 
