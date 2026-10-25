@@ -637,3 +637,7 @@ Une enquête auprès de 15 clients volontaires indique une satisfaction médiane
 | Interpréter les résultats | Texte contextualisé | Population effectivement observée et limites |
 
 **Démarche à retenir :** définir les unités et les variables, vérifier les données, présenter les effectifs, choisir les graphiques, calculer les indicateurs adaptés, puis interpréter dans le contexte étudié.
+
+## Chapitre complémentaire
+
+[Les tableaux statistiques : construction, typologie et interprétation](tableaux-statistiques.md) — exemples commentés et exercice corrigé.
