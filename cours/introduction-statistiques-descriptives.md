@@ -26,19 +26,413 @@ Les statistiques descriptives regroupent les méthodes permettant d’organiser,
 
 La statistique descriptive décrit les données disponibles. La statistique inférentielle cherche à estimer des caractéristiques d’une population ou à tester des hypothèses à partir d’un échantillon, sous des conditions explicites. Une moyenne calculée sur dix patients ne représente donc pas automatiquement tous les patients de la région.
 
-## 2. Le vocabulaire fondamental
+## 2. Vocabulaire statistique : 50 définitions avec exemples
 
-| Notion | Définition | Exemple |
-|---|---|---|
-| Population cible | Ensemble des unités auxquelles porte la question de recherche | Tous les étudiants d’un institut pendant une année donnée |
-| Échantillon | Sous-ensemble effectivement étudié | 80 étudiants interrogés |
-| Individu ou unité statistique | Unité sur laquelle l’observation porte | Un étudiant |
-| Variable | Caractéristique relevée pour chaque unité | Âge, filière, nombre d’absences |
-| Modalité | Catégorie ou valeur possible d’une variable | Filière infirmière ; trois absences |
-| Observation | Valeur effectivement relevée | L’étudiant A a 21 ans |
-| Effectif total | Nombre d’unités observées, noté n | n = 80 |
+Ce lexique accompagne le cours, des notions élémentaires aux premières notions d’inférence. Chaque entrée comprend une définition, un exemple fictif et une précision d’interprétation. Les notions 47 à 50 constituent une ouverture vers l’inférence et l’analyse de deux variables.
 
-Dans un fichier de données, une ligne correspond habituellement à une unité et une colonne à une variable. Si plusieurs mesures sont recueillies par personne, il faut préciser que les lignes représentent des visites ou des mesures répétées : leur nombre n’est alors pas celui des personnes.
+**Repères de lecture :** 1–12 : démarche et population ; 13–22 : variables et échelles ; 23–31 : organisation des données ; 32–44 : position, dispersion et forme ; 45–50 : qualité, incertitude et association.
+
+**Conventions :** n désigne l’effectif analysé ; Σ signifie « somme » ; x̄ désigne la moyenne observée ; ⌈a⌉ signifie « arrondir a à l’entier supérieur ». Les exemples sont pédagogiques et ne proviennent pas d’une enquête réelle.
+
+### 1. Statistique descriptive
+
+**Définition.** Ensemble des méthodes servant à organiser, résumer et représenter les données effectivement observées, sans que ces opérations suffisent à généraliser les résultats à une population plus large.
+
+**Exemple.** Décrire les temps d’attente de dix patients par une médiane, des quartiles et un histogramme.
+
+**Précision.** Une description exacte d’un échantillon ne garantit pas sa représentativité.
+
+### 2. Statistique inférentielle
+
+**Définition.** Ensemble des méthodes qui permettent d’estimer des paramètres ou de tester des hypothèses concernant une population à partir de données, en quantifiant l’incertitude sous des hypothèses explicites.
+
+**Exemple.** Estimer le temps d’attente moyen de tous les patients d’un centre à partir d’un échantillon probabiliste de consultations.
+
+**Précision.** Les conclusions dépendent du recrutement, du plan d’étude et des hypothèses du modèle.
+
+### 3. Population cible
+
+**Définition.** Ensemble des unités auquel se rapporte la question de recherche, défini par des critères d’appartenance, un périmètre géographique et une période.
+
+**Exemple.** Tous les étudiants inscrits dans un institut donné pendant l’année universitaire 2026–2027.
+
+**Précision.** « Les étudiants » est une définition trop imprécise pour délimiter une population cible.
+
+### 4. Population accessible
+
+**Définition.** Partie de la population cible que le dispositif de recherche permet concrètement de contacter ou d’observer.
+
+**Exemple.** Parmi tous les étudiants de l’institut, ceux inscrits dans les établissements autorisant la collecte.
+
+**Précision.** Les résultats obtenus dans la population accessible ne se transportent pas automatiquement vers toute la population cible.
+
+### 5. Unité statistique
+
+**Définition.** Entité élémentaire sur laquelle portent les mesures ou les classifications. Elle peut être une personne, une entreprise, un ménage, une consultation ou un territoire.
+
+**Exemple.** Pour étudier le coût par consultation, l’unité est la consultation ; pour étudier le coût annuel par patient, l’unité est le patient.
+
+**Précision.** Une même personne peut contribuer à plusieurs consultations : ces observations ne sont pas nécessairement indépendantes.
+
+### 6. Recensement
+
+**Définition.** Opération visant à recueillir des informations sur toutes les unités d’une population définie, et non sur un sous-ensemble seulement.
+
+**Exemple.** Interroger les 120 salariés d’une coopérative pour décrire leurs besoins de formation.
+
+**Précision.** Un recensement peut encore comporter des non-réponses, des omissions ou des erreurs de mesure.
+
+### 7. Échantillon
+
+**Définition.** Ensemble des unités sélectionnées pour une étude. On distingue l’échantillon initialement sélectionné, les répondants et l’échantillon effectivement analysé.
+
+**Exemple.** Sur 100 étudiants tirés au sort, 85 répondent et 80 disposent des informations nécessaires à une analyse donnée.
+
+**Précision.** Il faut préciser quel effectif est utilisé ; ces trois ensembles peuvent différer.
+
+### 8. Base de sondage
+
+**Définition.** Liste ou dispositif permettant d’identifier les unités susceptibles d’être sélectionnées dans un échantillon probabiliste.
+
+**Exemple.** Le registre actualisé des étudiants inscrits sert à tirer au sort des participants.
+
+**Précision.** Une liste incomplète ou contenant des doublons peut produire une erreur de couverture.
+
+### 9. Échantillonnage aléatoire simple
+
+**Définition.** Plan dans lequel tous les échantillons de même taille ont la même probabilité d’être sélectionnés ; dans sa forme sans remise, une unité ne peut être tirée deux fois.
+
+**Exemple.** Tirer au sort 40 identifiants distincts parmi les 200 étudiants d’une liste complète.
+
+**Précision.** Le tirage aléatoire ne supprime pas les difficultés liées aux non-réponses.
+
+### 10. Échantillonnage de convenance
+
+**Définition.** Sélection des unités selon leur disponibilité ou leur facilité d’accès, sans probabilités d’inclusion connues déterminées par un plan probabiliste.
+
+**Exemple.** Interroger les étudiants présents à la sortie d’un cours.
+
+**Précision.** Augmenter l’effectif ne corrige pas automatiquement le biais de sélection.
+
+### 11. Paramètre
+
+**Définition.** Caractéristique numérique de la population ou du modèle étudié, généralement inconnue et considérée comme fixe dans le cadre fréquentiste usuel.
+
+**Exemple.** μ désigne le temps d’attente moyen de l’ensemble des consultations de la population cible.
+
+**Précision.** Le paramètre visé doit être distingué de la valeur calculée dans l’échantillon.
+
+### 12. Statistique d’échantillon
+
+**Définition.** Fonction des données de l’échantillon ne dépendant pas de paramètres inconnus ; sa valeur varie d’un échantillon à l’autre.
+
+**Exemple.** La moyenne x̄ = 12 minutes calculée sur dix temps d’attente est une statistique d’échantillon.
+
+**Précision.** Une statistique peut décrire l’échantillon ou servir d’estimateur d’un paramètre.
+
+### 13. Variable
+
+**Définition.** Caractéristique définie pour les unités étudiées et susceptible de prendre différentes valeurs ou catégories.
+
+**Exemple.** Pour chaque entreprise : secteur d’activité, nombre de salariés et chiffre d’affaires annuel.
+
+**Précision.** Une définition opérationnelle doit préciser ce qui est mesuré, comment et sur quelle période.
+
+### 14. Modalité
+
+**Définition.** Catégorie ou valeur possible d’une variable, définie avant ou pendant l’organisation des données.
+
+**Exemple.** Pour le secteur d’activité : agriculture, industrie et services.
+
+**Précision.** Les catégories d’une question à réponse unique doivent être mutuellement exclusives et couvrir les réponses admissibles.
+
+### 15. Observation
+
+**Définition.** Valeur observée d’une variable pour une unité donnée ; par extension, le terme peut désigner l’ensemble des valeurs relevées sur cette unité.
+
+**Exemple.** L’âge de l’étudiant A est 21 ans ; sa ligne complète contient aussi sa filière et son nombre d’absences.
+
+**Précision.** Préciser si « 100 observations » désigne 100 personnes ou 100 mesures répétées.
+
+### 16. Variable qualitative nominale
+
+**Définition.** Variable dont les catégories ne possèdent pas d’ordre intrinsèque pertinent pour l’analyse.
+
+**Exemple.** Groupe sanguin : A, B, AB ou O.
+
+**Précision.** Attribuer les codes 1 à 4 à ces groupes n’autorise pas à interpréter leur moyenne.
+
+### 17. Variable qualitative ordinale
+
+**Définition.** Variable dont les catégories sont ordonnées, sans que les distances entre catégories soient nécessairement égales ou mesurables.
+
+**Exemple.** Satisfaction : faible, moyenne, élevée.
+
+**Précision.** Le passage de faible à moyenne ne représente pas nécessairement le même changement que celui de moyenne à élevée.
+
+### 18. Variable binaire
+
+**Définition.** Variable possédant exactement deux modalités ; elle est souvent codée 0 et 1.
+
+**Exemple.** Participation à une formation : 0 = non et 1 = oui.
+
+**Précision.** Avec ce codage, la moyenne vaut la proportion de « oui » parmi les valeurs valides ; inverser les codes change son interprétation.
+
+### 19. Variable quantitative discrète
+
+**Définition.** Variable numérique dont les valeurs possibles appartiennent à un ensemble fini ou dénombrable, souvent issu d’un comptage.
+
+**Exemple.** Nombre d’absences : 0, 1, 2, 3, etc.
+
+**Précision.** Une moyenne de 1,4 absence est possible même si aucun individu ne présente 1,4 absence.
+
+### 20. Variable quantitative continue
+
+**Définition.** Variable numérique modélisée comme pouvant prendre toute valeur dans un intervalle, même lorsque l’instrument impose un arrondi.
+
+**Exemple.** La durée d’attente peut être de 7,25 minutes, mais être enregistrée à la minute près.
+
+**Précision.** La précision d’enregistrement ne change pas à elle seule la nature du phénomène mesuré.
+
+### 21. Échelle d’intervalle
+
+**Définition.** Échelle numérique dans laquelle les différences sont interprétables, mais dont le zéro est conventionnel ; les rapports de valeurs ne le sont donc pas directement.
+
+**Exemple.** L’écart entre 10 °C et 20 °C est de 10 °C, mais 20 °C ne signifie pas « deux fois plus chaud » que 10 °C.
+
+**Précision.** Un changement d’origine modifie les rapports, contrairement aux différences exprimées dans la même unité.
+
+### 22. Échelle de rapport
+
+**Définition.** Échelle numérique possédant un zéro substantiel et permettant d’interpréter à la fois les différences et les rapports.
+
+**Exemple.** Une attente de 20 minutes dure deux fois plus longtemps qu’une attente de 10 minutes.
+
+**Précision.** Cette propriété concerne l’échelle de mesure, pas la qualité du recrutement ou la forme de la distribution.
+
+### 23. Effectif total et effectif valide
+
+**Définition.** L’effectif total compte les unités incluses dans l’ensemble considéré ; l’effectif valide compte celles pour lesquelles la variable ou l’analyse concernée dispose d’informations utilisables.
+
+**Exemple.** Sur 100 répondants, 92 indiquent leur âge : l’effectif valide pour décrire l’âge est 92.
+
+**Précision.** Une analyse utilisant plusieurs variables peut avoir un autre effectif valide.
+
+### 24. Effectif d’une modalité
+
+**Définition.** Nombre d’unités présentant une catégorie ou une valeur donnée, généralement noté nᵢ.
+
+**Exemple.** Parmi 20 étudiants, 12 appartiennent à la filière infirmière : nᵢ = 12.
+
+**Précision.** Pour une classification exhaustive à réponse unique, la somme des effectifs des catégories égale l’effectif valide.
+
+### 25. Fréquence relative
+
+**Définition.** Rapport entre l’effectif d’une modalité et l’effectif de référence : fᵢ = nᵢ / n. Elle est comprise entre 0 et 1.
+
+**Exemple.** 12 étudiants sur 20 donnent fᵢ = 12 / 20 = 0,60.
+
+**Précision.** Le dénominateur doit être explicite ; les enquêtes à réponses multiples demandent une attention particulière.
+
+### 26. Pourcentage
+
+**Définition.** Expression d’une proportion sur une base de 100 : pourcentage = 100 × f.
+
+**Exemple.** Une fréquence de 0,60 correspond à 60 %.
+
+**Précision.** Passer de 20 % à 30 % représente +10 points de pourcentage, soit une hausse relative de 50 %.
+
+### 27. Fréquence cumulée
+
+**Définition.** Proportion d’observations inférieures ou égales à une valeur, ou appartenant à une catégorie ordonnée donnée et aux catégories précédentes.
+
+**Exemple.** Si 2 étudiants ont zéro absence et 4 ont une absence sur 10 étudiants, la fréquence cumulée à une absence vaut 6 / 10 = 60 %.
+
+**Précision.** Une accumulation de catégories nominales selon un ordre arbitraire n’a pas de sens substantiel.
+
+### 28. Distribution empirique
+
+**Définition.** Répartition des valeurs observées et de leurs fréquences dans les données ; elle peut être décrite par un tableau, un graphique ou une fonction de répartition empirique.
+
+**Exemple.** Pour 2, 4, 4, 6, 9, les valeurs 2, 4, 6 et 9 ont respectivement les fréquences 20 %, 40 %, 20 % et 20 %.
+
+**Précision.** La distribution observée doit être distinguée d’une loi théorique supposée, telle que la loi normale.
+
+### 29. Classe statistique
+
+**Définition.** Intervalle regroupant plusieurs valeurs numériques pour simplifier la présentation d’une distribution.
+
+**Exemple.** La classe [10 ; 20[ minutes comprend 10 minutes et toutes les valeurs inférieures à 20 minutes, mais exclut 20.
+
+**Précision.** Les classes doivent éviter les chevauchements et couvrir les valeurs à décrire ; le regroupement fait perdre de l’information.
+
+### 30. Amplitude de classe
+
+**Définition.** Largeur d’une classe, égale à la différence entre sa borne supérieure et sa borne inférieure.
+
+**Exemple.** La classe [10 ; 20[ a une amplitude de 10 minutes ; [20 ; 40[ a une amplitude de 20 minutes.
+
+**Précision.** L’amplitude d’une classe ne doit pas être confondue avec l’étendue de toute la série.
+
+### 31. Densité de fréquence
+
+**Définition.** Fréquence d’une classe divisée par sa largeur. Dans un histogramme de densité, l’aire du rectangle représente la fréquence.
+
+**Exemple.** Une fréquence de 0,20 dans une classe de 10 minutes donne une hauteur de 0,02 par minute ; une fréquence de 0,40 dans une classe de 20 minutes donne la même hauteur.
+
+**Précision.** À largeurs inégales, comparer seulement les hauteurs ne revient pas à comparer les fréquences.
+
+### 32. Moyenne arithmétique
+
+**Définition.** Somme des valeurs numériques divisée par leur nombre : x̄ = Σxᵢ / n. Elle utilise toutes les observations et minimise la somme des écarts au carré.
+
+**Exemple.** Pour 2, 4, 4, 6, 9 : x̄ = 25 / 5 = 5.
+
+**Précision.** Elle est sensible aux valeurs extrêmes et n’est pas nécessairement une valeur observée.
+
+### 33. Moyenne pondérée
+
+**Définition.** Moyenne dans laquelle chaque valeur reçoit un poids : x̄w = Σwᵢxᵢ / Σwᵢ, pour des poids non négatifs dont la somme est positive.
+
+**Exemple.** Deux groupes de 10 et 30 étudiants ont des moyennes de 12 et 16 : la moyenne globale est (10 × 12 + 30 × 16) / 40 = 15.
+
+**Précision.** Faire simplement (12 + 16) / 2 = 14 serait incorrect ici, car les effectifs diffèrent.
+
+### 34. Médiane
+
+**Définition.** Valeur de position telle qu’au moins la moitié des observations lui sont inférieures ou égales et au moins la moitié lui sont supérieures ou égales. Pour une série numérique de taille paire, on retient usuellement la moyenne des deux valeurs centrales.
+
+**Exemple.** Pour 2, 4, 4, 6, 9, la médiane est 4 ; pour 2, 4, 6, 9, elle vaut (4 + 6) / 2 = 5.
+
+**Précision.** Pour des catégories ordinales, on raisonne sur les catégories centrales sans moyenner arbitrairement leurs codes.
+
+### 35. Mode
+
+**Définition.** Valeur ou catégorie de fréquence maximale. Plusieurs modalités peuvent atteindre cette fréquence maximale.
+
+**Exemple.** Pour 2, 4, 4, 6, 9, le mode est 4. Dans le cours, 7 et 10 minutes sont deux modes.
+
+**Précision.** Avec des données continues regroupées, la classe la plus représentée ne donne pas la valeur modale exacte.
+
+### 36. Quantile et percentile
+
+**Définition.** Un quantile d’ordre p situe un seuil associé à une proportion p de la distribution ; un percentile est un quantile exprimé sur une échelle de 0 à 100. Le calcul empirique dépend d’une convention.
+
+**Exemple.** Pour 5, 7, 7, 8, 10, 10, 12, 13, 18, 30, le percentile 90 vaut 18 avec la règle du rang ⌈0,90 × 10⌉.
+
+**Précision.** Les interpolations des logiciels peuvent donner une autre valeur ; indiquer la méthode retenue.
+
+### 37. Quartiles
+
+**Définition.** Quantiles associés aux niveaux 25 %, 50 % et 75 %, notés Q1, Q2 et Q3 ; Q2 correspond à la médiane. Dans ce cours, Q1 et Q3 utilisent les rangs ⌈n/4⌉ et ⌈3n/4⌉.
+
+**Exemple.** Pour les dix temps d’attente du cours : Q1 = 7, Q2 = 10 et Q3 = 13 minutes.
+
+**Précision.** Dans une petite série comportant des ex æquo, les intervalles délimités ne contiennent pas nécessairement exactement 25 % des observations chacun.
+
+### 38. Étendue
+
+**Définition.** Différence entre la plus grande et la plus petite valeur observées : maximum − minimum.
+
+**Exemple.** Pour des temps allant de 5 à 30 minutes, l’étendue vaut 25 minutes.
+
+**Précision.** Elle ne décrit pas la répartition des valeurs intermédiaires et dépend fortement des extrêmes.
+
+### 39. Écart interquartile
+
+**Définition.** Différence Q3 − Q1, mesurant la dispersion de la partie centrale de la distribution.
+
+**Exemple.** Avec Q1 = 7 et Q3 = 13 minutes, l’écart interquartile vaut 6 minutes.
+
+**Précision.** L’écart est le nombre 6 ; l’intervalle interquartile est [7 ; 13]. Ils ne sont pas interchangeables.
+
+### 40. Variance descriptive
+
+**Définition.** Moyenne des carrés des écarts à la moyenne de la série observée : v = Σ(xᵢ − x̄)² / n.
+
+**Exemple.** Pour 2, 4, 4, 6, 9, la somme des carrés des écarts à 5 vaut 28, donc v = 28 / 5 = 5,6.
+
+**Précision.** Si les données sont en minutes, la variance est en minutes². La variance corrigée s² utilise n − 1 pour estimer la variance de population dans le cadre usuel d’observations indépendantes et identiquement distribuées.
+
+### 41. Écart-type
+
+**Définition.** Racine carrée de la variance ; il exprime la dispersion autour de la moyenne dans l’unité de la variable.
+
+**Exemple.** Pour une variance descriptive de 5,6 minutes², l’écart-type descriptif vaut √5,6 ≈ 2,37 minutes.
+
+**Précision.** Ce n’est pas la moyenne des écarts absolus. La valeur dépend du choix entre variance descriptive et variance corrigée.
+
+### 42. Coefficient de variation
+
+**Définition.** Rapport de l’écart-type à la moyenne, souvent multiplié par 100, permettant de décrire une dispersion relative lorsque l’échelle et la moyenne rendent ce rapport pertinent.
+
+**Exemple.** Une durée moyenne de 20 minutes avec un écart-type de 4 minutes donne un coefficient de variation de 20 %.
+
+**Précision.** Il convient surtout à une échelle de rapport et à une moyenne positive suffisamment éloignée de zéro ; il est inadapté aux températures Celsius.
+
+### 43. Asymétrie
+
+**Définition.** Caractéristique d’une distribution qui n’est pas symétrique autour de son centre. Une asymétrie à droite correspond à une queue plus étendue vers les grandes valeurs.
+
+**Exemple.** Dans les temps d’attente du cours, la valeur de 30 minutes allonge la partie droite ; la moyenne de 12 dépasse la médiane de 10.
+
+**Précision.** Le seul écart entre moyenne et médiane ne suffit pas à caractériser complètement la forme ; examiner aussi le graphique.
+
+### 44. Valeur atypique
+
+**Définition.** Observation inhabituelle relativement au reste des données, au contexte ou au modèle. Son repérage dépend d’un critère explicite.
+
+**Exemple.** Avec Q1 = 7 et Q3 = 13, la borne supérieure de Tukey vaut 13 + 1,5 × 6 = 22 minutes : 30 minutes est signalée.
+
+**Précision.** Une valeur atypique peut être valide. Vérifier sa provenance avant de la corriger ou de l’exclure.
+
+### 45. Donnée manquante
+
+**Définition.** Information qui devait ou pouvait être recueillie mais qui n’est pas disponible pour une unité et une variable données.
+
+**Exemple.** Deux étudiants sur 20 ne renseignent pas leur âge : la description des âges disponibles repose sur 18 valeurs.
+
+**Précision.** Ne pas remplacer automatiquement les données manquantes par zéro ou par la moyenne ; leur traitement dépend du mécanisme de non-réponse et de l’objectif.
+
+### 46. Biais de sélection
+
+**Définition.** Distorsion liée au mécanisme d’inclusion ou de maintien dans l’analyse, lorsque celui-ci compromet l’estimation de la quantité visée dans la population cible.
+
+**Exemple.** Estimer la satisfaction de tous les étudiants en interrogeant seulement les participants volontaires à une activité appréciée peut surreprésenter les plus satisfaits.
+
+**Précision.** Ce biais ne disparaît pas simplement avec un échantillon plus grand.
+
+### 47. Erreur standard
+
+**Définition.** Écart-type de la distribution d’échantillonnage d’un estimateur, généralement estimé à partir des données. Elle renseigne sur sa variabilité entre échantillons.
+
+**Exemple.** Pour une moyenne de 100 observations indépendantes et identiquement distribuées avec s = 10, l’erreur standard estimée est s / √n = 1.
+
+**Précision.** L’écart-type décrit la dispersion des observations ; l’erreur standard décrit l’incertitude d’un estimateur. La formule simple change avec les données dépendantes ou les plans complexes.
+
+### 48. Intervalle de confiance
+
+**Définition.** Intervalle construit par une procédure dont le taux de couverture du paramètre est fixé, sous les hypothèses du modèle et du plan d’échantillonnage.
+
+**Exemple.** Pour x̄ = 50, s = 10 et n = 100, un intervalle à 95 % pour la moyenne sous hypothèse normale utilise t à 99 degrés de liberté : 50 ± 1,984 × 1, soit environ [48,02 ; 51,98].
+
+**Précision.** Dans l’interprétation fréquentiste, 95 % qualifie la procédure sur des répétitions hypothétiques, et non la proportion des observations contenues dans cet intervalle.
+
+### 49. Covariance
+
+**Définition.** Mesure de variation conjointe de deux variables numériques, fondée sur les produits de leurs écarts aux moyennes. Son signe indique le sens de leur variation conjointe linéaire.
+
+**Exemple.** Pour x = (1, 2, 3) et y = (2, 4, 6), la somme des produits des écarts vaut 4 : la covariance descriptive vaut 4 / 3, et la covariance corrigée vaut 4 / 2 = 2.
+
+**Précision.** Elle dépend des unités des deux variables ; sa grandeur ne permet pas directement de comparer des relations mesurées dans des unités différentes.
+
+### 50. Corrélation linéaire de Pearson
+
+**Définition.** Covariance standardisée par le produit des écarts-types, définie lorsque les variances sont non nulles. Le coefficient r, compris entre −1 et 1, décrit le sens et l’intensité d’une relation linéaire.
+
+**Exemple.** Pour x = (1, 2, 3) et y = (2, 4, 6), r = 1 : les points sont exactement sur une droite croissante.
+
+**Précision.** Une corrélation ne prouve pas une causalité ; r = 0 n’exclut pas une relation non linéaire. Les valeurs atypiques peuvent fortement modifier r.
 
 ## 3. Les types de variables
 
