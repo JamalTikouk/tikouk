@@ -4,6 +4,8 @@
 
 - [Les tableaux statistiques : construction, typologie et interprétation](cours/tableaux-statistiques.md) — typologies, exemples commentés, pourcentages, données manquantes et exercice corrigé.
 
+- [Graphiques statistiques : galerie de 23 images commentées](cours/graphiques-statistiques.md) — barres, histogrammes, distributions, relations, évolutions et incertitude.
+
 Le support se consulte directement sur GitHub, sans installation.
 
 ---
